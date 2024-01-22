@@ -1,0 +1,39 @@
+Pretrain:
+  data_type: fp
+  verbose: True
+  detect_anomaly: False
+  use_edge_attr: True
+  use_tensorboard: True
+  save_model: True
+  save_fig: True
+  log_dir: ./log
+  fig_dir: ./fig
+  ckpt_dir: ./model
+  data_dir: ./data
+  split_type: all
+  gnn_type: gin
+  depth: 2
+  dropout: 0.2
+  norm: batch
+  JK: concat
+  graph_pooling: sum
+
+Train:
+  verbose: True
+  detect_anomaly: False
+  save_model: True
+  use_edge_attr: True
+  use_tensorboard: True
+  fix_pretrain: False
+  focal_loss: True
+  dropout: 0.2
+  heads: 1
+  early_stop: -1
+  split_type: random
+  n_run: 5
+  log_dir: ./log
+  fig_dir: ./fig
+  ckpt_dir: ./model
+  data_dir: ./data
+  graph_pooling: sum
+  use_extra_pretrain: True
